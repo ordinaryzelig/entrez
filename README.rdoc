@@ -1,0 +1,28 @@
+= Entrez
+
+Entrez is a simple API for making HTTP requests to Entrez utilities (eutils: http://eutils.ncbi.nlm.nih.gov/).
+
+== Usage
+
+Entrez.efetch(<database>, parameters)
+
+== Example
+
+  Entrez.efetch('snp', {id: '9268480', retmode: 'xml'})
+will return an xml document with information about rs9268480.
+It's up to you to parse the document.
+
+== Email & Tool
+
+NCBI (or wheover) requests that you supply the tool you are using and your email.
+The Entrez gem uses 'ruby' as the tool.
+Email is obtained from an environment variable ENTREZ_EMAIL on your computer.
+I set mine in my ~/.bash_profile:
+  export ENTREZ_EMAIL='jared@redningja.com'
+
+== What about EInfo, ESummary, EPost, ESearch, ELink, EGQuery, and ESpell?
+
+For my purposes, I only needed EFetch.
+But if you would like to contribute, please feel free.
+After seeing the code, assuming you know how to submit requests to einfo et al,
+It should be trivial to implement them here.
