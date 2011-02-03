@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<ExchangeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.ncbi.nlm.nih.gov/SNP/docsum"
+xsi:schemaLocation="http://www.ncbi.nlm.nih.gov/SNP/docsum
+ftp://ftp.ncbi.nlm.nih.gov/snp/specs/docsum_3.1.xsd"><SourceDatabase taxId="0"
+organism=""/>
+ 
+
+
+<Rs rsId="9268480" snpClass="snp" snpType="notwithdrawn" molType="genomic" genotype="true" bitField="050368000301050503020100" taxId="9606">
+  <Het type="est" value="0.306968957185745" stdError="0.243591338396072"/>
+  <Validation byCluster="true" byFrequency="true"></Validation>
+  <Create build="118" date="2003-10-31 16:50"/>
+  <Update build="132" date="2011-01-04 14:46"/>
+  <Sequence exemplarSs="12693244" ancestralAllele="C">
+    <Seq5>CCAGTTTAGTCTTCAGATGATTACAGTTTCTAGAATTTTATTGCATTTCTCAGAATTCTAATAACACACTGTGAAACAATGAGCCTTTTGTAAAATATGTAGTAAGATACTCAGATTTCCTTAAAGATATGGTCAATTTTTGAAGATACTGGAAAAGATACAAGTTATATGCCCAAATAATTAAATTTCATCCATTTGAGTTTGTGGATTTTAAGTAACTATGACAGTTTCACACACTGGAGGATTTGATATAAATTTGATGATGAATAAGCATTAAGAAAATTTCAAATGTCAGAGAAATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+    <Observed>C/T</Observed>
+    <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGTCACTCACCAGTACAGTCCTCCCTCTGTACTCTGCCATCTGCTCTCCAGCCACATGGTCCCCATCCATATACACATGCACAGCAGGGTAACGGTGGGATCGGTCCCACCTCACCTCCATGCTCTGTGCATTCGCCTTGGGGGACAGGTAACAGGTTAGCTGTATATCTTCTCCCACTCTGACGAGGATGGGCTGGGAAGGTCCATTCACTTTTAAAGAAGCTGTTAAATAGAGTGGACAAAACACAATGAAAGAATCAAAATGGAACCAATAATGTCATCTCTAAGAACAGCTCCATTGGA</Seq3>
+  </Sequence>
+  <Ss ssId="12693244" handle="SI_MHC_SNP" batchId="30080" locSnpId="AL662796.6_71437_CT" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="118" methodClass="sequence" validated="by-cluster">
+    <Sequence>
+      <Seq5>CCAGTTTAGTCTTCAGATGATTACAGTTTCTAGAATTTTATTGCATTTCTCAGAATTCTAATAACACACTGTGAAACAATGAGCCTTTTGTAAAATATGTAGTAAGATACTCAGATTTCCTTAAAGATATGGTCAATTTTTGAAGATACTGGAAAAGATACAAGTTATATGCCCAAATAATTAAATTTCATCCATTTGAGTTTGTGGATTTTAAGTAACTATGACAGTTTCACACACTGGAGGATTTGATATAAATTTGATGATGAATAAGCATTAAGAAAATTTCAAATGTCAGAGAAATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGTCACTCACCAGTACAGTCCTCCCTCTGTACTCTGCCATCTGCTCTCCAGCCACATGGTCCCCATCCATATACACATGCACAGCAGGGTAACGGTGGGATCGGTCCCACCTCACCTCCATGCTCTGTGCATTCGCCTTGGGGGACAGGTAACAGGTTAGCTGTATATCTTCTCCCACTCTGACGAGGATGGGCTGGGAAGGTCCATTCACTTTTAAAGAAGCTGTTAAATAGAGTGGACAAAACACAATGAAAGAATCAAAATGGAACCAATAATGTCATCTCTAAGAACAGCTCCATTGGA</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="23138294" handle="FHCRC" batchId="11352" locSnpId="JF16_7049" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="126" methodClass="unknown" validated="by-frequency">
+    <Sequence>
+      <Seq5>TTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGT</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="24650851" handle="PERLEGEN" batchId="12311" locSnpId="afd0292430" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="123" methodClass="hybridize" validated="by-cluster">
+    <Sequence>
+      <Seq5>TTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGT</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="38346936" handle="PULMONOLOGYMSSM" batchId="18500" locSnpId="G16043A" subSnpClass="snp" orient="reverse" strand="top" molType="genomic" buildId="126" methodClass="unknown" validated="by-frequency">
+    <Sequence>
+      <Seq5>TCGGACGACGGGCAGTACCGCTGCCTTTTTGAAAAAGATGATGTCTACCA</Seq5>
+      <Observed>A/G</Observed>
+      <Seq3>GAGGCCAGTTTGGATCTGAAGGTGGTAAGTAAGAATTCTAGATAGATATT</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="44707181" handle="ABI" batchId="18990" locSnpId="hCV2488470" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="126" methodClass="unknown" linkoutUrl="http://myscience.appliedbiosystems.com/servlet/com.celera.web.myab.servlets.MyscienceGateway?source=dbSNP&amp;resource=genotypingAssay&amp;ap2=Celera+SNP&amp;ap1=hCV2488470">
+    <Sequence>
+      <Seq5>AGTAAGATACTCAGATTTCCTTAAAGATATGGTCAATTTTTGAAGATACTGGAAAAGATACAAGTTATATGCCCAAATAATTAAATTTCATCCATTTGAGTTTGTGGATTTTAAGTAACTATGACAGTTTCACACACTGGAGGATTTGATATAAATTTGATGATGAATAAGCATTAAGAAAATTTCAAATGTCAGAGAAATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACCTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGTCACTCACCAGTACAGTCCTCCCTCTGTACTCTGCCATCTGCTCTCCAGCCACATGGTCCCCATCCATATACACATGCACAGCAGGGTAACGGTGGGATCGGTCCCACCTCACCTCCATGCTCTGTGCATTCGCCTTGGGGGACAGGTAACAGGTTAGCTGTATATCTTCTCCCACTCTGACGAGGATGGGCTGGGAAGGT</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="52083135" handle="SI_EXO" batchId="30185" locSnpId="NT_007592.14_23222094" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="127" methodClass="unknown">
+    <Sequence>
+      <Seq5>CCAGTTTAGTCTTCAGATGATTACAGTTTCTAGAATTTTATTGCATTTCTCAGAATTCTAATAACACACTGTGAAACAATGAGCCTTTTGTAAAATATGTAGTAAGATACTCAGATTTCCTTAAAGATATGGTCAATTTTTGAAGATACTGGAAAAGATACAAGTTATATGCCCAAATAATTAAATTTCATCCATTTGAGTTTGTGGATTTTAAGTAACTATGACAGTTTCACACACTGGAGGATTTGATATAAATTTGATGATGAATAAGCATTAAGAAAATTTCAAATGTCAGAGAAATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGTCACTCACCAGTACAGTCCTCCCTCTGTACTCTGCCATCTGCTCTCCAGCCACATGGTCCCCATCCATATACACATGCACAGCAGGGTAACGGTGGGATCGGTCCCACCTCACCTCCATGCTCTGTGCATTCGCCTTGGGGGACAGGTAACAGGTTAGCTGTATATCTTCTCCCACTCTGACGAGGATGGGCTGGGAAGGTCCATTCACTTTTAAAGAAGCTGTTAAATAGAGTGGACAAAACACAATGAAAGAATCAAAATGGAACCAATAATGTCATCTCTAAGAACAGCTCCATTGGA</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="65847636" handle="KRIBB_YJKIM" batchId="33716" locSnpId="KHS23433" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="127" methodClass="other" validated="by-cluster">
+    <Sequence>
+      <Seq5>AGTAAGATACTCAGATTTCCTTAAAGATATGGTCAATTTTTGAAGATACTGGAAAAGATACAAGTTATATGCCCAAATAATTAAATTTCATCCATTTGAGTTTGTGGATTTTAAGTAACTATGACAGTTTCACACACTGGAGGATTTGATATAAATTTGATGATGAATAAGCATTAAGAAAATTTCAAATGTCAGAGAAATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGTCACTCACCAGTACAGTCCTCCCTCTGTACTCTGCCATCTGCTCTCCAGCCACATGGTCCCCATCCATATACACATGCACAGCAGGGTAACGGTGGGATCGGTCCCACCTCACCTCCATGCTCTGTGCATTCGCCTTGGGGGACAGGTAACAGGTTAGCTGTATATCTTCTCCCACTCTGACGAGGATGGGCTGGGAAGGT</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="66383197" handle="AFFY" batchId="33767" locSnpId="SNP_A-2047476" subSnpClass="snp" orient="reverse" strand="top" molType="genomic" buildId="127" methodClass="hybridize" validated="by-cluster" linkoutUrl="http://www.affymetrix.com/support/technical/byproduct.affx?product=100kSNP_A-2047476">
+    <Sequence>
+      <Seq5>AAGATGATGTCTACCA</Seq5>
+      <Observed>A/G</Observed>
+      <Seq3>GAGGCCAGTTTGGATC</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="68972045" handle="PERLEGEN" batchId="38687" locSnpId="PGP00292430" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="127" methodClass="hybridize" validated="by-cluster">
+    <Sequence>
+      <Seq5>GGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGA</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="76118578" handle="AFFY" batchId="52074" locSnpId="AFFY_6_1M_SNP_A-2047476" subSnpClass="snp" orient="reverse" strand="top" molType="genomic" buildId="129" methodClass="hybridize" validated="by-submitter">
+    <Sequence>
+      <Seq5>AAGATGATGTCTACCA</Seq5>
+      <Observed>A/G</Observed>
+      <Seq3>GAGGCCAGTTTGGATC</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="82555304" handle="KRIBB_YJKIM" batchId="52429" locSnpId="KHS279420" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="130" methodClass="hybridize" validated="by-submitter">
+    <Sequence>
+      <Seq5>TTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGT</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="86242140" handle="CORNELL" batchId="58444" locSnpId="hCV2488470" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="129" methodClass="unknown">
+    <Sequence>
+      <Seq5>AATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGA</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="93437732" handle="BCMHGSC_JDW" batchId="59658" locSnpId="JWB-2121515" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="129" methodClass="computed">
+    <Sequence>
+      <Seq5>GGAAAAGATACAAGTTATATGCCCAAATAATTAAATTTCATCCATTTGAGTTTGTGGATTTTAAGTAACTATGACAGTTTCACACACTGGAGGATTTGATATAAATTTGATGATGAATAAGCATTAAGAAAATTTCAAATGTCAGAGAAATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGTCACTCACCAGTACAGTCCTCCCTCTGTACTCTGCCATCTGCTCTCCAGCCACATGGTCCCCATCCATATACACATGCACAGCAGGGTAACGGTGGGATCGGTCCCACCTCACCTCCATGCTCTGTGCATTCGCCTTGGGGGACAGGTAAC</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="98487577" handle="HUMANGENOME_JCVI" batchId="60080" locSnpId="1103652828650" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="130" methodClass="sequence" validated="by-submitter" linkoutUrl="http://huref.jcvi.org/browse.html?search=1103652828650">
+    <Sequence>
+      <Seq5>GGAAAAGATACAAGTTATATGCCCAAATAATTAAATTTCATCCATTTGAGTTTGTGGATTTTAAGTAACTATGACAGTTTCACACACTGGAGGATTTGATATAAATTTGATGATGAATAAGCATTAAGAAAATTTCAAATGTCAGAGAAATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACCTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGTCACTCACCAGCACAGTCCTCCCTCTGTACTCTGCCATCTGCTCTCCAGCCACATGGTCCCCATCCATATACACATGCACAGCAGGGTAACGGTGGGATCGGTCCCACCTCACCTCCATGCTCTGTGCATTCGCCTTGGGGGACAGGTAAC</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="104297553" handle="BGI" batchId="856429" locSnpId="BGI_rs9268480" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="131" methodClass="unknown">
+    <Sequence>
+      <Seq5>TTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACYTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGT</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="133671803" handle="ENSEMBL" batchId="856818" locSnpId="ENSSNP3072269" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="131" methodClass="computed">
+    <Sequence>
+      <Seq5>ATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGTC</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="144248004" handle="ENSEMBL" batchId="856818" locSnpId="ENSSNP13882478" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="131" methodClass="computed">
+    <Sequence>
+      <Seq5>ATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGTC</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="156753178" handle="GMI" batchId="1048915" locSnpId="GMI_SNP_77301931" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="131" methodClass="sequence" validated="by-submitter">
+    <Sequence>
+      <Seq5>TTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGT</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="159712195" handle="SEATTLESEQ" batchId="1048973" locSnpId="BTNL2-32471822" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="131" methodClass="unknown">
+    <Sequence>
+      <Seq5>AATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGA</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="160970526" handle="ILLUMINA" batchId="1049033" locSnpId="HumanOmni1-Quad_v1-0_B_rs9268480-128_B_F_1561716334" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="131" methodClass="hybridize" validated="by-submitter">
+    <Sequence>
+      <Seq5>TTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCA</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="162203174" handle="COMPLETE_GENOMICS" batchId="1049290" locSnpId="NA07022_36_chr6_32471822" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="132" methodClass="sequence" validated="by-submitter">
+    <Sequence>
+      <Seq5>GGAAAAGATACAAGTTATATGCCCAAATAATTAAATTTCATCCATTTGAGTTTGTGGATTTTAAGTAACTATGACAGTTTCACACACTGGAGGATTTGATATAAATTTGATGATGAATAAGCATTAAGAAAATTTCAAATGTCAGAGAAATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGTCACTCACCAGTACAGTCCTCCCTCTGTACTCTGCCATCTGCTCTCCAGCCACATGGTCCCCATCCATATACACATGCACAGCAGGGTAACGGTGGGATCGGTCCCACCTCACCTCCATGCTCTGTGCATTCGCCTTGGGGGACAGGTAAC</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="172560055" handle="AFFY" batchId="1049350" locSnpId="GenomeWideSNP_5_SNP_A-2047476" subSnpClass="snp" orient="reverse" strand="top" molType="genomic" buildId="132" methodClass="hybridize" validated="by-submitter">
+    <Sequence>
+      <Seq5>AAGATGATGTCTACCA</Seq5>
+      <Observed>A/G</Observed>
+      <Seq3>GAGGCCAGTTTGGATC</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="201632426" handle="BUSHMAN" batchId="1050084" locSnpId="BUSHMAN-chr6-32471821" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="132" methodClass="unknown">
+    <Sequence>
+      <Seq5>TTTGTGGATTTTAAGTAACTATGACAGTTTCACACACTGGAGGATTTGATATAAATTTGATGATGAATAAGCATTAAGAAAATTTCAAATGTCAGAGAAATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGTCACTCACCAGTACAGTCCTCCCTCTGTACTCTGCCATCTGCTCTCCAGCCACATGGTCCCCATCCATATACACATGCACAGCAGGGTAACGGTGGGATCG</Seq3>
+    </Sequence>
+  </Ss>
+  <Ss ssId="207457298" handle="BCM-HGSC-SUB" batchId="1050312" locSnpId="BCM_CMT_1011-1284727" subSnpClass="snp" orient="forward" strand="bottom" molType="genomic" buildId="132" methodClass="sequence" validated="by-submitter">
+    <Sequence>
+      <Seq5>GGAAAAGATACAAGTTATATGCCCAAATAATTAAATTTCATCCATTTGAGTTTGTGGATTTTAAGTAACTATGACAGTTTCACACACTGGAGGATTTGATATAAATTTGATGATGAATAAGCATTAAGAAAATTTCAAATGTCAGAGAAATTGTCCAGGAACTAGCATATTAAAGTGGCAGGAGCAGGTATTGAATACAAAATATCTATCTAGAATTCTTACTTACCACCTTCAGATCCAAACTGGCCTC</Seq5>
+      <Observed>C/T</Observed>
+      <Seq3>TGGTAGACATCATCTTTTTCAAAAAGGCAGCGGTACTGCCCGTCGTCCGAAGGTCTGGCACTGAGTATCTGCAGGGTCAGTCTGCCCTCGTCAATGGCGTCACTCACCAGTACAGTCCTCCCTCTGTACTCTGCCATCTGCTCTCCAGCCACATGGTCCCCATCCATATACACATGCACAGCAGGGTAACGGTGGGATCGGTCCCACCTCACCTCCATGCTCTGTGCATTCGCCTTGGGGGACAGGTAAC</Seq3>
+    </Sequence>
+  </Ss>
+  <Assembly dbSnpBuild="132" genomeBuild="37_1" groupLabel="Celera" current="true">
+    <Component componentType="contig" ctgId="88999178" accession="NW_923073.1" name="NW_923073.1" chromosome="6" start="28535679" end="58908290" orientation="fwd" gi="88999178" groupTerm="Celera" contigLabel="Celera">
+      <MapLoc asnFrom="5394909" asnTo="5394909" locType="exact" alnQuality="0.998325" orient="forward" physMapInt="33930588" leftFlankNeighborPos="399" rightFlankNeighborPos="401" leftContigNeighborPos="5394908" rightContigNeighborPos="5394910" numberOfMismatches="2" numberOfDeletions="0" numberOfInsertions="0"></MapLoc>
+    </Component>
+    <SnpStat mapWeight="unique-in-contig" chromCount="1" placedContigCount="1" unplacedContigCount="0" seqlocCount="1" hapCount="0"/>
+  </Assembly>
+  <Assembly dbSnpBuild="132" genomeBuild="37_1" groupLabel="GRCh37" current="true" reference="true">
+    <Component componentType="contig" ctgId="224514668" accession="NT_007592.15" name="NT_007592.15" chromosome="6" start="60000" end="58780165" orientation="fwd" gi="224514668" groupTerm="GRCh37" contigLabel="GRCh37">
+      <MapLoc asnFrom="32303843" asnTo="32303843" locType="exact" alnQuality="1" orient="forward" physMapInt="32363843" leftFlankNeighborPos="399" rightFlankNeighborPos="401" leftContigNeighborPos="32303842" rightContigNeighborPos="32303844" numberOfMismatches="1" numberOfDeletions="0" numberOfInsertions="0">
+        <FxnSet geneId="56244" symbol="BTNL2" mrnaAcc="NM_019602" mrnaVer="1" protAcc="NP_062548" protVer="1" fxnClass="coding-synonymous" readingFrame="3" allele="A" residue="Q" aaPosition="349"/>
+        <FxnSet geneId="56244" symbol="BTNL2" mrnaAcc="NM_019602" mrnaVer="1" protAcc="NP_062548" protVer="1" fxnClass="reference" readingFrame="3" allele="G" residue="Q" aaPosition="349"/>
+      </MapLoc>
+    </Component>
+    <Component componentType="contig" ctgId="224515576" accession="NT_167244.1" name="NT_167244.1" chromosome="6" orientation="fwd" gi="224515576" groupTerm="GRCh37" contigLabel="GRCh37">
+      <MapLoc asnFrom="3678213" asnTo="3678213" locType="exact" alnQuality="1" orient="forward" leftFlankNeighborPos="399" rightFlankNeighborPos="401" leftContigNeighborPos="3678212" rightContigNeighborPos="3678214" numberOfMismatches="1" numberOfDeletions="0" numberOfInsertions="0"></MapLoc>
+    </Component>
+    <Component componentType="contig" ctgId="224515577" accession="NT_113891.2" name="NT_113891.2" chromosome="6" orientation="fwd" gi="224515577" groupTerm="GRCh37" contigLabel="GRCh37">
+      <MapLoc asnFrom="3834264" asnTo="3834264" locType="exact" alnQuality="1" orient="forward" leftFlankNeighborPos="399" rightFlankNeighborPos="401" leftContigNeighborPos="3834263" rightContigNeighborPos="3834265" numberOfMismatches="1" numberOfDeletions="0" numberOfInsertions="0"></MapLoc>
+    </Component>
+    <Component componentType="contig" ctgId="224515578" accession="NT_167245.1" name="NT_167245.1" chromosome="6" orientation="fwd" gi="224515578" groupTerm="GRCh37" contigLabel="GRCh37">
+      <MapLoc asnFrom="3642742" asnTo="3642742" locType="exact" alnQuality="1" orient="forward" leftFlankNeighborPos="399" rightFlankNeighborPos="401" leftContigNeighborPos="3642741" rightContigNeighborPos="3642743" numberOfMismatches="1" numberOfDeletions="0" numberOfInsertions="0"></MapLoc>
+    </Component>
+    <Component componentType="contig" ctgId="224515579" accession="NT_167246.1" name="NT_167246.1" chromosome="6" orientation="fwd" gi="224515579" groupTerm="GRCh37" contigLabel="GRCh37">
+      <MapLoc asnFrom="3706679" asnTo="3706679" locType="exact" alnQuality="0.993719" orient="forward" leftFlankNeighborPos="399" rightFlankNeighborPos="401" leftContigNeighborPos="3706678" rightContigNeighborPos="3706680" numberOfMismatches="6" numberOfDeletions="0" numberOfInsertions="0"></MapLoc>
+    </Component>
+    <Component componentType="contig" ctgId="224515580" accession="NT_167247.1" name="NT_167247.1" chromosome="6" orientation="fwd" gi="224515580" groupTerm="GRCh37" contigLabel="GRCh37">
+      <MapLoc asnFrom="3743401" asnTo="3743401" locType="exact" alnQuality="0.995894" orient="forward" leftFlankNeighborPos="399" rightFlankNeighborPos="401" leftContigNeighborPos="3743400" rightContigNeighborPos="3743402" numberOfMismatches="4" numberOfDeletions="0" numberOfInsertions="0"></MapLoc>
+    </Component>
+    <Component componentType="contig" ctgId="224515581" accession="NT_167248.1" name="NT_167248.1" chromosome="6" orientation="fwd" gi="224515581" groupTerm="GRCh37" contigLabel="GRCh37">
+      <MapLoc asnFrom="3624701" asnTo="3624701" locType="exact" alnQuality="1" orient="forward" leftFlankNeighborPos="399" rightFlankNeighborPos="401" leftContigNeighborPos="3624700" rightContigNeighborPos="3624702" numberOfMismatches="1" numberOfDeletions="0" numberOfInsertions="0"></MapLoc>
+    </Component>
+    <Component componentType="contig" ctgId="224515582" accession="NT_167249.1" name="NT_167249.1" chromosome="6" orientation="fwd" gi="224515582" groupTerm="GRCh37" contigLabel="GRCh37">
+      <MapLoc asnFrom="3711286" asnTo="3711286" locType="exact" alnQuality="0.995894" orient="forward" leftFlankNeighborPos="399" rightFlankNeighborPos="401" leftContigNeighborPos="3711285" rightContigNeighborPos="3711287" numberOfMismatches="4" numberOfDeletions="0" numberOfInsertions="0"></MapLoc>
+    </Component>
+    <SnpStat mapWeight="unique-in-contig" chromCount="1" placedContigCount="1" unplacedContigCount="0" seqlocCount="8" hapCount="0"/>
+  </Assembly>
+  <Assembly dbSnpBuild="132" genomeBuild="37_1" groupLabel="HuRef" current="true">
+    <Component componentType="contig" ctgId="157696541" accession="NW_001838980.1" name="NW_001838980.1" chromosome="6" start="26727691" end="39531031" orientation="fwd" gi="157696541" groupTerm="HuRef" contigLabel="HuRef">
+      <MapLoc asnFrom="5390074" asnTo="5390074" locType="exact" alnQuality="0.995894" orient="forward" physMapInt="32117765" leftFlankNeighborPos="399" rightFlankNeighborPos="401" leftContigNeighborPos="5390073" rightContigNeighborPos="5390075" numberOfMismatches="4" numberOfDeletions="0" numberOfInsertions="0"></MapLoc>
+    </Component>
+    <SnpStat mapWeight="unique-in-contig" chromCount="1" placedContigCount="1" unplacedContigCount="0" seqlocCount="1" hapCount="0"/>
+  </Assembly>
+  <PrimarySequence dbSnpBuild="132" gi="9624968" source="remap" accession="NM_019602">
+    <MapLoc asnFrom="1049" asnTo="1049" locType="exact" alnQuality="1" orient="reverse" leftContigNeighborPos="1048" rightContigNeighborPos="1050"></MapLoc>
+  </PrimarySequence>
+  <RsStruct protAcc="NP_062548" protGi="9624969" protLoc="350" protResidue="Q" rsResidue="Q" structGi="209870436" structLoc="111" structResidue="E"/>
+  <RsStruct protAcc="NP_062548" protGi="9624969" protLoc="350" protResidue="Q" rsResidue="H" structGi="209870436" structLoc="111" structResidue="E"/>
+  <RsStruct protAcc="NP_062548" protGi="9624969" protLoc="350" protResidue="Q" rsResidue="H" structGi="209870436" structLoc="111" structResidue="E"/>
+  <RsLinkout resourceId="1" linkValue="9268480"/>
+  <MergeHistory rsId="57538739" buildId="130"/>
+  <MergeHistory rsId="17423795" buildId="123"/>
+  <MergeHistory rsId="17208804" buildId="126"/>
+  <hgvs>NM_019602.1:c.1050G&gt;A</hgvs>
+  <hgvs>NT_007592.15:g.32303844C&gt;T</hgvs>
+</Rs>
+
+
+
+<Summary/><BaseURL></BaseURL></ExchangeSet>
