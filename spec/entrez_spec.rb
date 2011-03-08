@@ -8,8 +8,12 @@ describe Entrez do
   end
 
   it 'should efetch results' do
-    rs_number = 9268480.to_s
-    Entrez.efetch('snp', {id: rs_number, retmode: 'xml'}).should eq(file_fixture('efetch.xml'))
+    Entrez.efetch('snp', {id: 9268480, retmode: 'xml'}).should eq(file_fixture('efetch.xml'))
+  end
+
+  it 'should respect query limit' do
+    requests = proc { 4.times { Entrez.efetch('snp', id: 9268480) } }
+    requests.should take_longer_than(1.0)
   end
 
 end
