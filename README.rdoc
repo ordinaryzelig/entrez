@@ -6,26 +6,46 @@ Entrez is a simple API for making HTTP requests to Entrez utilities (eutils: htt
 
   gem install entrez
 
-or if you use Bundler awesomeness:
+or if you use Bundler:
 
   # Gemfile
   gem 'entrez'
 
 It requires httparty.
 
+See 'Email & Tool' section below for setup.
+
 == Usage
 
-Entrez.efetch(<database>, parameters)
+(You can copy/paste the resulting following request URLs into a browser to see what the response would be.)
 
-== Example
+=== EFetch, ESummary
 
-  Entrez.efetch('snp', {id: '9268480', retmode: 'xml'})
-will return an xml document with information about rs9268480.
-It's up to you to parse the document.
+args:
+* database
+* params hash
+
+  Entrez.EFetch('snp', id: 123, retmode: :xml)
+  #=> makes request to http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=snp&id=9268480&retmode=xml
+  #=> returns XML document with SNP rs9268480 data.
+
+ESummary takes the same arguments.
+
+=== ESearch
+
+args:
+* database
+* term hash
+* params hash
+
+  Entrez.ESearch('genomeprj', {WORD: 'hapmap', SEQS: 'inprogress'}, retmode: :xml)
+  #=> makes request to http://http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=genomeprj&term=hapmap[WORD]+AND+inprogress[SEQS]&retmode=xml
+  #=> returns XML document with list of Ids of genome projects that match the searc term criteria
+  #=> i.e. genome projects that have 'hapmap' in the description and whose sequencing status is 'inprogress'.
 
 == Email & Tool
 
-NCBI (or wheover) requests that you supply the tool you are using and your email.
+NCBI asks that you supply the tool you are using and your email.
 The Entrez gem uses 'ruby' as the tool.
 Email is obtained from an environment variable ENTREZ_EMAIL on your computer.
 I set mine in my ~/.bash_profile:
@@ -37,12 +57,13 @@ NCBI recommends no more than 3 URL requests per second: http://www.ncbi.nlm.nih.
 This gem respects this limit. It will delay the next request if the last 3 have been made within 1 second.
 The amount of delay time is no more than what is necessary to make the next request "respectful".
 
-== What about EInfo, ESummary, EPost, ESearch, ELink, EGQuery, and ESpell?
+== Supported Utilities
 
-For my purposes, I only needed EFetch.
-But if you would like to contribute, please feel free.
-After seeing the code, assuming you know how to submit requests to einfo et al,
-It should be easy to implement them here.
+* EFetch
+* ESummary
+* ESearch
+
+Not yet implemented: EInfo, EPost, ELink, EGQuery, ESpell.
 
 == Compatibility
 
