@@ -8,14 +8,18 @@ class Entrez
 
   class << self
 
-    def efetch(db, params = {})
-      respect_query_limit
-      request_times << Time.now.to_f
-      get '/efetch.fcgi', :query => {db: db}.merge(params)
+    def EFetch(db, params = {})
+      perform '/efetch.fcgi', db, params
     end
 
-    def request_times
-      @request_times ||= []
+    def ESummary(db, params = {})
+      perform '/esummary.fcgi', db, params
+    end
+
+    def perform(utility_path, db, params = {})
+      respect_query_limit
+      request_times << Time.now.to_f
+      get utility_path, :query => {db: db}.merge(params)
     end
 
     private
@@ -30,6 +34,10 @@ class Entrez
         STDERR.puts "sleeping #{now - three_requests_ago}"
         sleep(now - three_requests_ago)
       end
+    end
+
+    def request_times
+      @request_times ||= []
     end
 
   end
