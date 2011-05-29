@@ -72,6 +72,8 @@ class Entrez
       response.instance_eval do
         def ids
           @ids ||= self['eSearchResult']['IdList']['Id'].map(&:to_i)
+        rescue ::NoMethodError
+          @ids = []
         end
       end
     end
