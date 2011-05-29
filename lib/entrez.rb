@@ -72,7 +72,12 @@ class Entrez
     def parse_ids_and_extend(response)
       response.instance_eval do
         def ids
-          @ids ||= self['eSearchResult']['IdList']['Id'].map(&:to_i)
+          return @ids if @ids
+          id_content = self['eSearchResult']['IdList']['Id']
+          # If there is only 1, Crack will parse it and return just the string.
+          # Need to always return array.
+          id_content = [id_content].flatten
+          @ids = id_content.map(&:to_i)
         rescue ::NoMethodError
           @ids = []
         end
