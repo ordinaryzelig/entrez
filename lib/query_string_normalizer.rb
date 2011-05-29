@@ -7,6 +7,7 @@ QueryStringNormalizer = proc do |query_hash|
     else
       value
     end
+    value_string.gsub!(' ', '%20')
     "#{key}=#{value_string}"
   end.join('&')
 end
