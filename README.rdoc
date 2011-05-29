@@ -35,7 +35,7 @@ ESummary takes the same arguments.
 
 args:
 * database
-* term hash
+* search terms (hash will be converted to term[field]+AND+another_term[another_field] notation. It can also be a string literal.)
 * params hash (optional)
 
   Entrez.ESearch('genomeprj', {WORD: 'hapmap', SEQS: 'inprogress'}, retmode: :xml)

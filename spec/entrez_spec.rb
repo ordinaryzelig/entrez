@@ -37,6 +37,11 @@ describe Entrez do
     response.ids.should be_empty
   end
 
+  it '#ESearch accepts string as search_terms parameter' do
+    response = Entrez.ESearch('genomeprj', 'hapmap[WORD]', retmode: :xml)
+    response.ids.should include(60153)
+  end
+
   it 'should respect query limit' do
     requests = proc { 4.times { Entrez.EFetch('taxonomy', id: 9606) } }
     requests.should take_longer_than(1.0)

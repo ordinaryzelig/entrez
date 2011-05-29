@@ -22,8 +22,9 @@ class Entrez
 
     # E.g. Entrez.ESearch('genomeprj', {WORD: 'hapmap', SEQS: 'inprogress'}, retmode: :xml)
     # returns response. For convenience, response.ids() returns array of ID integers from result set.
+    # search_terms can also be string literal.
     def ESearch(db, search_terms = {}, params = {})
-      params[:term] = convert_search_term_hash(search_terms)
+      params[:term] = search_terms.is_a?(Hash) ? convert_search_term_hash(search_terms) : search_terms
       response = perform '/esearch.fcgi', db, params
       parse_ids_and_extend response if response[:retmode].nil? || response[:retmode] == :xml
       response
