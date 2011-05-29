@@ -22,6 +22,11 @@ describe Entrez do
     response.body.should include('28911')
   end
 
+  it '#EInfo retrieves results' do
+    response = Entrez.EInfo('snp', retmode: :xml)
+    response.body.should include('<Name>RS</Name>')
+  end
+
   it 'should respect query limit' do
     requests = proc { 4.times { Entrez.EFetch('taxonomy', id: 9606) } }
     requests.should take_longer_than(1.0)

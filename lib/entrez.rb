@@ -10,17 +10,25 @@ class Entrez
 
   class << self
 
+    # E.g. Entrez.EFetch('snp', id: 123, retmode: :xml)
     def EFetch(db, params = {})
       perform '/efetch.fcgi', db, params
     end
 
-    def ESummary(db, params = {})
-      perform '/esummary.fcgi', db, params
+    # E.g. Entrez.EInfo('gene', retmode: :xml)
+    def EInfo(db, params = {})
+      perform '/einfo.fcgi', db, params
     end
 
+    # E.g. Entrez.ESearch('genomeprj', {WORD: 'hapmap', SEQS: 'inprogress'}, retmode: :xml)
     def ESearch(db, search_terms = {}, params = {})
       params[:term] = convert_search_term_hash(search_terms)
       perform '/esearch.fcgi', db, params
+    end
+
+    # E.g. Entrez.ESummary('snp', id: 123, retmode: :xml)
+    def ESummary(db, params = {})
+      perform '/esummary.fcgi', db, params
     end
 
     def perform(utility_path, db, params = {})

@@ -23,10 +23,10 @@ See 'Email & Tool' section below for setup.
 
 args:
 * database
-* params hash
+* params hash (optional)
 
   Entrez.EFetch('snp', id: 123, retmode: :xml)
-  #=> makes request to http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=snp&id=9268480&retmode=xml
+  #=> makes request to http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=snp&id=9268480&retmode=xml.
   #=> returns XML document with SNP rs9268480 data.
 
 ESummary takes the same arguments.
@@ -36,12 +36,22 @@ ESummary takes the same arguments.
 args:
 * database
 * term hash
-* params hash
+* params hash (optional)
 
   Entrez.ESearch('genomeprj', {WORD: 'hapmap', SEQS: 'inprogress'}, retmode: :xml)
-  #=> makes request to http://http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=genomeprj&term=hapmap[WORD]+AND+inprogress[SEQS]&retmode=xml
-  #=> returns XML document with list of Ids of genome projects that match the searc term criteria
+  #=> makes request to http://http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=genomeprj&term=hapmap[WORD]+AND+inprogress[SEQS]&retmode=xml.
+  #=> returns XML document with list of Ids of genome projects that match the searc term criteria.
   #=> i.e. genome projects that have 'hapmap' in the description and whose sequencing status is 'inprogress'.
+
+=== EInfo
+
+args:
+* database
+* params hash (optional)
+
+  Entrez.EInfo('gene', retmode: :xml)
+  #=> makes request to http://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=gene.
+  #=> returns XML document with list of searchable fields for gene database.
 
 == Email & Tool
 
@@ -63,7 +73,7 @@ The amount of delay time is no more than what is necessary to make the next requ
 * ESummary
 * ESearch
 
-Not yet implemented: EInfo, EPost, ELink, EGQuery, ESpell.
+Not yet implemented: EPost, ELink, EGQuery, ESpell.
 
 == Compatibility
 
