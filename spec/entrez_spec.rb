@@ -27,6 +27,11 @@ describe Entrez do
     response.body.should include('<Name>RS</Name>')
   end
 
+  it '#ESearch response returns IDs for convenience' do
+    response = Entrez.ESearch('genomeprj', {WORD: 'hapmap', SEQS: 'inprogress'}, retmode: :xml)
+    response.ids.should == [60153, 29429, 28911, 48101, 59851, 59849, 59847, 59845, 59839, 59835, 59833, 59831, 51895, 59829, 59827, 60835, 59811, 60831, 60819, 33895]
+  end
+
   it 'should respect query limit' do
     requests = proc { 4.times { Entrez.EFetch('taxonomy', id: 9606) } }
     requests.should take_longer_than(1.0)

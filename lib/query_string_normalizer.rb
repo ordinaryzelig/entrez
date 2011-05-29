@@ -5,8 +5,10 @@ QueryStringNormalizer = proc do |query_hash|
     when Array
       value.join(',')
     else
-      value
+      # If value is a string, it will be frozen, so dup it.
+      value.to_s.dup
     end
+    # Escape spaces.
     value_string.gsub!(' ', '%20')
     "#{key}=#{value_string}"
   end.join('&')

@@ -21,9 +21,12 @@ class Entrez
     end
 
     # E.g. Entrez.ESearch('genomeprj', {WORD: 'hapmap', SEQS: 'inprogress'}, retmode: :xml)
+    # returns response. For convenience, response.ids() returns array of ID integers from result set.
     def ESearch(db, search_terms = {}, params = {})
       params[:term] = convert_search_term_hash(search_terms)
-      perform '/esearch.fcgi', db, params
+      response = perform '/esearch.fcgi', db, params
+      parse_ids_and_extend response if response[:retmode].nil? || response[:retmode] == :xml
+      response
     end
 
     # E.g. Entrez.ESummary('snp', id: 123, retmode: :xml)
@@ -62,6 +65,15 @@ class Entrez
       hash.map do |field, value|
         "#{value}[#{field}]"
       end.join('+AND+')
+    end
+
+    # Define ids() method which will parse and return the IDs from the XML response.
+    def parse_ids_and_extend(response)
+      response.instance_eval do
+        def ids
+          @ids ||= self['eSearchResult']['IdList']['Id'].map(&:to_i)
+        end
+      end
     end
 
   end
