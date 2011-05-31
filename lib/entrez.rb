@@ -64,6 +64,7 @@ class Entrez
     # #=> 'low coverage[WORD]+AND+inprogress[SEQS]'
     def convert_search_term_hash(hash)
       hash.map do |field, value|
+        value = value.join(',') if value.is_a?(Array)
         "#{value}[#{field}]"
       end.join('+AND+')
     end
