@@ -62,4 +62,14 @@ describe Entrez do
     requests.should take_longer_than(1.0)
   end
 
+  it 'should convert search term hash into query string with AND operator by default' do
+    query_string = {TITL: 'BRCA1', ORGN: 'human'}
+    Entrez.convert_search_term_hash(query_string).should == 'BRCA1[TITL]+AND+human[ORGN]'
+  end
+
+  it 'should convert search term hash into query string with OR operator with parentheses' do
+    query_string = {TITL: 'BRCA1', ORGN: 'human'}
+    Entrez.convert_search_term_hash(query_string, 'OR').should == '(BRCA1[TITL]+OR+human[ORGN])'
+  end
+
 end

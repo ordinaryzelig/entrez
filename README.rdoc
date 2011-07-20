@@ -17,7 +17,21 @@ See 'Email & Tool' section below for setup.
 
 == Usage
 
-(You can copy/paste the resulting following request URLs into a browser to see what the response would be.)
+Supported Utilities
+
+* EFetch
+* EInfo
+* ESearch
+* ESummary
+
+Not yet implemented
+
+* EPost
+* ELink
+* EGQuery
+* ESpell
+
+You can copy/paste the resulting following request URLs into a browser to see what the response would be.
 
 === EFetch, ESummary
 
@@ -39,9 +53,16 @@ args:
 * params hash (optional)
 
   Entrez.ESearch('genomeprj', {WORD: 'hapmap', SEQS: 'inprogress'}, retmode: :xml)
-  #=> makes request to http://http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=genomeprj&term=hapmap[WORD]+AND+inprogress[SEQS]&retmode=xml.
+  #=> makes request to http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=genomeprj&term=hapmap[WORD]+AND+inprogress[SEQS]&retmode=xml.
   #=> returns XML document with list of Ids of genome projects that match the searc term criteria.
   #=> i.e. genome projects that have 'hapmap' in the description and whose sequencing status is 'inprogress'.
+
+==== Customized Queries
+
+You can build your own customized queries if you have something more complex with ANDs and ORs.
+Use Entrez.convert_search_term_hash() to help you.
+It converts a hash into a valid Entrez search string properly joined with the operator of your choosing.
+If you pass in the OR operator, the returned search string will be wrapped in a set of parentheses.
 
 === EInfo
 
@@ -66,14 +87,6 @@ I set mine in my ~/.bash_profile:
 NCBI recommends no more than 3 URL requests per second: http://www.ncbi.nlm.nih.gov/books/NBK25497/#chapter2.Usage_Guidelines_and_Requiremen
 This gem respects this limit. It will delay the next request if the last 3 have been made within 1 second.
 The amount of delay time is no more than what is necessary to make the next request "respectful".
-
-== Supported Utilities
-
-* EFetch
-* ESummary
-* ESearch
-
-Not yet implemented: EPost, ELink, EGQuery, ESpell.
 
 == Compatibility
 

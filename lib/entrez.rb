@@ -41,6 +41,21 @@ class Entrez
       get utility_path, :query => {db: db}.merge(params)
     end
 
+    # Take a ruby hash and convert it to an ENTREZ search term.
+    # E.g. convert_search_term_hash {WORD: 'low coverage', SEQS: 'inprogress'}
+    # #=> 'low coverage[WORD]+AND+inprogress[SEQS]'
+    def convert_search_term_hash(hash, operator = 'AND')
+      raise UnknownOperator.new(operator) unless ['AND', 'OR'].include?(operator)
+      str = hash.map do |field, value|
+        value = value.join(',') if value.is_a?(Array)
+        "#{value}[#{field}]"
+      end.join("+#{operator}+")
+      if operator == 'OR'
+        str = "(#{str})"
+      end
+      str
+    end
+
     private
 
     def respect_query_limit
@@ -59,16 +74,6 @@ class Entrez
       @request_times ||= []
     end
 
-    # Take a ruby hash and convert it to an ENTREZ search term.
-    # E.g. convert_search_term_hash {WORD: 'low coverage', SEQS: 'inprogress'}
-    # #=> 'low coverage[WORD]+AND+inprogress[SEQS]'
-    def convert_search_term_hash(hash)
-      hash.map do |field, value|
-        value = value.join(',') if value.is_a?(Array)
-        "#{value}[#{field}]"
-      end.join('+AND+')
-    end
-
     # Define ids() method which will parse and return the IDs from the XML response.
     def parse_ids_and_extend(response)
       response.instance_eval do
@@ -85,6 +90,12 @@ class Entrez
       end
     end
 
+  end
+
+  class UnknownOperator < StandardError
+    def initialize(operator)
+      super "Unknown operator: #{operator}"
+    end
   end
 
 end
