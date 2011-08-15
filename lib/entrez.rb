@@ -1,4 +1,5 @@
 require 'httparty'
+require 'httparty/response_ext'
 require 'query_string_normalizer'
 
 class Entrez
@@ -21,12 +22,10 @@ class Entrez
     end
 
     # E.g. Entrez.ESearch('genomeprj', {WORD: 'hapmap', SEQS: 'inprogress'}, retmode: :xml)
-    # returns response. For convenience, response.ids() returns array of ID integers from result set.
     # search_terms can also be string literal.
     def ESearch(db, search_terms = {}, params = {})
       params[:term] = search_terms.is_a?(Hash) ? convert_search_term_hash(search_terms) : search_terms
       response = perform '/esearch.fcgi', db, params
-      parse_ids_and_extend response if response[:retmode].nil? || response[:retmode] == :xml
       response
     end
 
@@ -58,36 +57,23 @@ class Entrez
 
     private
 
+    # NCBI does not allow more than 3 requests per second.
+    # Unless 3 requests ago was more than 1 second ago,
+    # sleep for enough time to honor limit.
     def respect_query_limit
       three_requests_ago = request_times[-3]
       return unless three_requests_ago
-      three_requests_ago = three_requests_ago.to_f
-      now = Time.now.to_f
-      enough_time_has_passed = now > three_requests_ago + 1
+      time_for_last_3_requeests = Time.now.to_f - three_requests_ago
+      enough_time_has_passed = time_for_last_3_requeests >= 1
       unless enough_time_has_passed
-        STDERR.puts "sleeping #{now - three_requests_ago}"
-        sleep(now - three_requests_ago)
+        sleep_time = 1 - time_for_last_3_requeests
+        STDERR.puts "sleeping #{sleep_time}"
+        sleep(sleep_time)
       end
     end
 
     def request_times
       @request_times ||= []
-    end
-
-    # Define ids() method which will parse and return the IDs from the XML response.
-    def parse_ids_and_extend(response)
-      response.instance_eval do
-        def ids
-          return @ids if @ids
-          id_content = self['eSearchResult']['IdList']['Id']
-          # If there is only 1, Crack will parse it and return just the string.
-          # Need to always return array.
-          id_content = [id_content].flatten
-          @ids = id_content.map(&:to_i)
-        rescue ::NoMethodError
-          @ids = []
-        end
-      end
     end
 
   end

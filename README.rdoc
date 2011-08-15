@@ -54,8 +54,13 @@ args:
 
   Entrez.ESearch('genomeprj', {WORD: 'hapmap', SEQS: 'inprogress'}, retmode: :xml)
   #=> makes request to http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=genomeprj&term=hapmap[WORD]+AND+inprogress[SEQS]&retmode=xml.
-  #=> returns XML document with list of Ids of genome projects that match the searc term criteria.
+  #=> returns XML document with list of ids of genome projects that match the searc term criteria.
   #=> i.e. genome projects that have 'hapmap' in the description and whose sequencing status is 'inprogress'.
+
+The response has a convenience method to retrieve the parsed ids.
+
+  response = Entrez.ESearch('genomeprj', {WORD: 'hapmap', SEQS: 'inprogress'}, retmode: :xml)
+  response.ids #=> [1, 2, ...]
 
 ==== Customized Queries
 

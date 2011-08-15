@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<!DOCTYPE eSearchResult PUBLIC "-//NLM//DTD eSearchResult, 11 May 2002//EN" "http://www.ncbi.nlm.nih.gov/entrez/query/DTD/eSearch_020511.dtd">
+<eSearchResult><Count>41</Count><RetMax>20</RetMax><RetStart>0</RetStart><IdList>
+	</IdList><TranslationSet/><TranslationStack>   <TermSet>    <Term>hapmap[WORD]</Term>    <Field>WORD</Field>    <Count>3</Count>    <Explode>Y</Explode>   </TermSet>   <TermSet>    <Term>inprogress[SEQS]</Term>    <Field>SEQS</Field>    <Count>3913</Count>    <Explode>Y</Explode>   </TermSet>   <OP>AND</OP>  </TranslationStack><QueryTranslation>hapmap[WORD] AND inprogress[SEQS]</QueryTranslation></eSearchResult>
