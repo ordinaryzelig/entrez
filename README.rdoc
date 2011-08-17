@@ -93,6 +93,21 @@ NCBI recommends no more than 3 URL requests per second: http://www.ncbi.nlm.nih.
 This gem respects this limit. It will delay the next request if the last 3 have been made within 1 second.
 The amount of delay time is no more than what is necessary to make the next request "respectful".
 
+=== Ignore query limits for testing
+
+If you use something like FakeWeb for testing, and you don't want to slow down your tests, tell Entrez to ignore the query limit:
+
+  require 'entrez/spec_helpers'
+  it 'does something that I promise will not bother NCBI' do
+    Entrez.ignore_query_limit do
+      # Anything that happens within this block will ignore the query limit.
+      # So make sure you do not actually request queries from NCBI.
+      # For example:
+      FakeWeb.allow_net_connect = false
+    end
+    # Query limits are respected again outside of the block.
+  end
+
 == Compatibility
 
 http://test.rubygems.org/gems/entrez

@@ -16,10 +16,15 @@ module Macros
   # Since the generated URL is a bit difficult to capture,
   # Faked uri will just match regular expression of service.
   # When block ends, clean registry.
-  def fake_service(service, fixture_file_name)
+  # Ignore Entrez query limit unless told not to.
+  def fake_service(service, fixture_file_name, options = {}, &block)
     file_contents = fixture_file(fixture_file_name).read
     FakeWeb.register_uri(:get, Regexp.new(service.to_s.downcase), body: file_contents, content_type: 'text/xml')
-    yield
+    if options.fetch(:ignore_query_limit, true)
+      Entrez.ignore_query_limit(&block)
+    else
+      block.call
+    end
   ensure
     FakeWeb.clean_registry
   end
