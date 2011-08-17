@@ -1,4 +1,4 @@
-class Entrez
+module Entrez
 
   class << self
 
