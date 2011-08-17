@@ -1,7 +1,6 @@
 require 'httparty'
 require 'httparty/response_ext'
 require 'query_string_normalizer'
-require 'entrez/options'
 require 'entrez/query_limit'
 
 module Entrez
