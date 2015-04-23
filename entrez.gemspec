@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/ordinaryzelig/entrez"
   s.summary     = %q{HTTP requests to Entrez E-utilities}
   s.description = %q{Simple API for HTTP requests to Entrez E-utilities}
+  s.license     = 'MIT'
 
   s.rubyforge_project = "entrez"
 
