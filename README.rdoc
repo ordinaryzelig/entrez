@@ -1,5 +1,7 @@
 = Entrez
 
+**This gem is no longer maintained.**
+
 Entrez is a simple API for making HTTP requests to Entrez utilities (eutils: http://eutils.ncbi.nlm.nih.gov/).
 
 == Installation
