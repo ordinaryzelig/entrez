@@ -1,4 +1,5 @@
 require 'httparty/response/ids'
+require 'httparty/response/paginate'
 
 module HTTParty
   module ResponseExt
