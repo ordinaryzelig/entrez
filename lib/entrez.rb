@@ -57,6 +57,10 @@ module Entrez
       str
     end
 
+    def proxy(addr, port, user=nil, pass=nil)
+      http_proxy addr, port, user, pass
+    end
+
   end
 
   class UnknownOperator < StandardError
